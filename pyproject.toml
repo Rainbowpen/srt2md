@@ -1,0 +1,25 @@
+[project]
+name = "srt2md"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Simon Zheng",email = "cy-cpe940305@hotmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13, <3.14"
+dependencies = [
+    "ollama (>=0.5.1,<0.6.0)",
+    "pyinstaller (>=6.14.1,<7.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "srt2md", from = "src"}]
+
+[tool.poetry.scripts]
+build = "srt2md.pyinstaller:install"
+
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
